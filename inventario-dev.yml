@@ -1,0 +1,7 @@
+info:
+  app:
+    version: "1.0.0"
+    message: "Desarrollando el microservicio de inventario"
+    contact:
+      name: "Alberto"
+      email: "alberto@example.com"
