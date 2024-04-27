@@ -2,10 +2,11 @@ server:
   port: 8081
 
 spring:
-  datasource:
+    datasource:
         url: jdbc:mysql://localhost:3307/inventariodb
         username: root
-        password: root
+        password: "root"
+
     jpa:
         hibernate:
             naming:
@@ -15,3 +16,4 @@ spring:
         multipart:
             max-file-size: 10MB
             max-request-size: 10MB
+
