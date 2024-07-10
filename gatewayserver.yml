@@ -6,7 +6,7 @@ eureka:
     preferIpAddress: true
   client:
     serviceUrl:
-      defaultZone: http://localhost:8070/eureka/
+      defaultZone: http://eurekaserver-ms:8070/eureka/
 
 management:
   endpoints:
