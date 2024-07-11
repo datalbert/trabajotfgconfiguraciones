@@ -1,12 +1,29 @@
 server:
   port: 8071
 
+spring:
+  cloud:
+    gateway:
+      cors-configurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:4200"
+            allowedMethods:
+            - GET
+            - POST
+            - PUT
+            - DELETE
+            - OPTIONS
+            allowHeaders:
+            - "*"
+            
+
 eureka:
   instance:
     preferIpAddress: true
   client:
     serviceUrl:
       defaultZone: http://eurekaserver-ms:8070/eureka/
+
 
 management:
   endpoints:
