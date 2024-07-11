@@ -8,8 +8,8 @@ spring:
         add-to-simple-url-handler-mapping: true
         cors-configurations:
             '[/**]':
-              allowedOrigins: "http://localhost:4200"
-              allowedMethods:
+              allowOrigins: "http://localhost:4200"
+              allowMethods:
               - GET
               - POST
               - PUT
