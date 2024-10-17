@@ -1,7 +1,3 @@
-paypal:
-    mode: sandbox
-    client-id: AeztPFCVfz11CMp2HZTpjH_WvwiGfyyjQqyoiTW-pN1PucqqmHM4lEhyguTfFiOc9DXwDenCZn9D_rv4
-    client-secret: ECof2AOBm33P04kw1vC8O6HqR2V6qSST-SYXWJg2uyH0rt6KGaT24wMIT33U4_aq4sn2qDhdZUwHEV0V
 server:
     port: 9090
 
