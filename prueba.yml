@@ -1,3 +1,6 @@
+google:
+  api_key: AIzaSyA7PCl0v7KaoIyz4BPtnCt9WsSiewhdi
+
 server:
   port: 8081
 spring:  
