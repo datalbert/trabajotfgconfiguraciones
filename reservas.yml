@@ -20,7 +20,7 @@ spring:
               brokers: 
                 - localhost:9092
     datasource:
-        url: jdbc:mysql://reservas-db-ms:3308/reservasdb
+        url: jdbc:mysql://reservas-db-ms:3306/reservasdb
         username: root
         password: "root"
         driver-class-name: com.mysql.cj.jdbc.Driver
