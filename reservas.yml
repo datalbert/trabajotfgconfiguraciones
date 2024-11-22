@@ -2,6 +2,23 @@ server:
     port: 8082
 
 spring:
+    cloud:
+        function:
+            definition: sendEmail;sendInventarioConfirmation;sendPagoConfirmation
+
+        stream:
+          bindings:
+            sendEmail-out-0:
+              destination: send-email
+            sendInventarioConfirmation-out-0:
+              destination: inventario-confirmation
+            sendPagoConfirmation-in-0:
+              destination: pago-confirmation
+            
+          kafka:
+            binder:
+              brokers: 
+                - localhost:9092
     datasource:
         url: jdbc:mysql://reservas-db-ms:3308/reservasdb
         username: root
@@ -13,3 +30,28 @@ spring:
             naming:
                 physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
         show-sql: true
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+        defaultZone: http://eurekaserver-ms:8070/eureka/
+        #defaultZone: http://localhost:8070/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    readinessstate: 
+      enabled: true
+    livenessstate:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true
