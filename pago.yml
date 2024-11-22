@@ -27,8 +27,10 @@ eureka:
   instance:
     preferIpAddress: true
   client:
+    fetchRegistry: true
+    registerWithEureka: true
     serviceUrl:
-      defaultZone: http://eurekaserver-ms:8070/eureka/
+        defaultZone: http://eurekaserver-ms:8070/eureka/
 
 management:
   endpoints:
