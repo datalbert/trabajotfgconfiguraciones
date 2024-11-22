@@ -28,6 +28,16 @@ spring:
             binder:
               brokers: 
                 - localhost:9092
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+        defaultZone: http://eurekaserver-ms:8070/eureka/
+        #defaultZone: http://localhost:8070/eureka/
+
 management:
   endpoints:
     web:
@@ -42,4 +52,3 @@ management:
     health:
       probes:
         enabled: true
-
