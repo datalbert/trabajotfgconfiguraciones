@@ -17,6 +17,17 @@ spring:
         multipart:
             max-file-size: 10MB
             max-request-size: 10MB
+    cloud:
+        function:
+            definition: sendInventarioConfirmation
+        stream:
+          bindings:
+            sendInventarioConfirmation-in-0:
+              destination: inventario-confirmation
+          kafka:
+            binder:
+              brokers: 
+                - localhost:9092
 eureka:
   instance:
     preferIpAddress: true
