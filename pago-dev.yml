@@ -13,6 +13,17 @@ spring:
             naming:
                 physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
         show-sql: true
+    cloud:
+      function:
+        definition: sendPagoConfirmation
+      stream:
+        bindings:
+          sendPagoConfirmation-out-0:
+            destination: pago-confirmation
+        kafka:
+          binder:
+            brokers:
+              - localhost:9092
 eureka:
   instance:
     preferIpAddress: true
