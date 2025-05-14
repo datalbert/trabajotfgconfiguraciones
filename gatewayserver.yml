@@ -6,7 +6,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://192.168.1.36:8080/realms/tfg
+          issuer-uri: http://host.docker.internal:7070/realms/tfg
   cloud:
     gateway:
       globalcors:
