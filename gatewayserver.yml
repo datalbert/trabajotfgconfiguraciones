@@ -6,7 +6,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://eurekaserver-container:7070/realms/tfg
+          issuer-uri: http://keycloak-container:7070/realms/tfg
   cloud:
     gateway:
       globalcors:
@@ -30,7 +30,7 @@ eureka:
     preferIpAddress: true
   client:
     serviceUrl:
-      defaultZone: http://eurekaserver-ms:8070/eureka/
+      defaultZone: http://eurekaserver-container:8070/eureka/
 
 
 management:
