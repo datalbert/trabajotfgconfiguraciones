@@ -6,14 +6,14 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://host.docker.internal:7070/realms/tfg
+          issuer-uri: http://eurekaserver-container:7070/realms/tfg
   cloud:
     gateway:
       globalcors:
         add-to-simple-url-handler-mapping: true
         cors-configurations:
             '[/**]':
-              allowedOrigins: "http://localhost:*"
+              allowedOrigins: "http://angular-contenedor:*"
               allowedMethods:
               - GET
               - POST
