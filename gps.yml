@@ -8,7 +8,7 @@ eureka:
     fetchRegistry: true
     registerWithEureka: true
     serviceUrl:
-        defaultZone: http://eurekaserver-ms:8070/eureka/
+        defaultZone: http://eurekaserver-container:8070/eureka/
 
 management:
   endpoints:
