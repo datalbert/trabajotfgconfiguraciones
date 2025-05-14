@@ -18,7 +18,7 @@ spring:
           kafka:
             binder:
               brokers: 
-                - localhost:9092
+                - kafka-container:9092
     datasource:
         url: jdbc:mysql://reservas-db-ms:3306/reservasdb
         username: root
@@ -38,7 +38,7 @@ eureka:
     fetchRegistry: true
     registerWithEureka: true
     serviceUrl:
-        defaultZone: http://eurekaserver-ms:8070/eureka/
+        defaultZone: http://eurekaserver-container:8070/eureka/
         #defaultZone: http://localhost:8070/eureka/
 
 management:
