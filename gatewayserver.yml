@@ -6,7 +6,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://keycloak-container:8080/realms/tfg
+          issuer-uri: http://host.docker.internal:7072/realms/tfg
   cloud:
     gateway:
       globalcors:
