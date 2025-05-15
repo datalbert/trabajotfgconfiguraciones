@@ -3,7 +3,7 @@ server:
 
 spring:
     datasource:
-        url: jdbc:mysql://localhost:3307/inventariodb
+        url: jdbc:mysql://192.168.1.36:3307/inventariodb
         username: root
         password: "root"
         driver-class-name: com.mysql.cj.jdbc.Driver
@@ -29,10 +29,10 @@ spring:
           kafka:
             binder:
               brokers: 
-                - localhost:9092
+                - 192.168.1.36:9092
 eureka:
   instance:
     preferIpAddress: true
   client:
     serviceUrl:
-      defaultZone: http://localhost:8070/eureka/
+      defaultZone: http://192.168.1.36:8070/eureka/
