@@ -1,11 +1,13 @@
 server:
   port: 8070
+  address: 0.0.0.0  # <- Esto permite conexiones desde fuera del contenedor
 
 eureka:
   instance:
-    hostname: 192.168.1.36
+    preferIpAddress: true
+    ip-address: 192.168.1.36  # <- Esto le dice a Eureka que anuncie esta IP (la del host)
   client:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://192.168.1.36:8070/eureka/
