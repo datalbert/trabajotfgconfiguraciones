@@ -36,4 +36,4 @@ eureka:
     #hostname: inventario-container
   client:
     serviceUrl:
-      defaultZone: http://192.168.1.36:8070/eureka/
+      defaultZone: http://eurekaserver-container:8070/eureka/
