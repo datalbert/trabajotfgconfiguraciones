@@ -4,10 +4,9 @@ server:
 
 eureka:
   instance:
-    preferIpAddress: true
-    ip-address: 192.168.1.36  # <- Esto le dice a Eureka que anuncie esta IP (la del host)
+    hostname: localhost
   client:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://192.168.1.36:8070/eureka/
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
